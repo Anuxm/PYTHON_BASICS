@@ -1,0 +1,55 @@
+list-- is the ordered collection
+list mutable--we can modify list aftr creation
+means sequence of arrangement is preserved
+if add elemets a,b,c it they wii remain same you can access using indexing
+#################################################################
+dict--originally is unorderd collection before the version 3.7--they didnt gurantee
+mutable--we modify once created--add,modify,delete content
+but we cant directly modify key--dic keys are hashable--every key has its unque value--dict uses hash value to determine where to store key-value in internal storage
+we have to add new key with old key value
+ex--a:1 --b:1
+about key-value pair order
+aft 3.7--insertion order is preserved
+collection.OrderedDict--explicitly emphasize order
+
+----before 3.7
+di={}
+di['a']=1
+di['b']=2
+print(dict)--might print-{a:1,b:2} or {b:2,a:1}
+----after 3.7
+it will maintain insertion order
+means first item you inser will be the first item
+second item you insert is the second item
+{a:1,b:2}
+-------ollections import OrderedDict
+if we import collections import OrderedDict
+no matter what version we are using it will main order
+di=OrderedDict()
+di['a']=1
+di['b']=2
+print(di)
+{a:1,b:2}
+
+dictionary meant for key-value lookups not for meant for  order
+###################################################################
+set is the ---unordered collection of item
+---mutable--we can modify once it created
+u cant access the set usingindexing bec they dont maintain order
+it willnot allow duplicates values
+a={"b","a"}
+print(a)--even though a added twice but it will print only once 
+order will vary --{a,b} or {b,a}
+note: if u try to remove an item from a set that isnt present
+python will raise keyerror
+to avoid this we can use discard method---it removes the elemet if it exists if elemet is not there it does nothing
+
+frozenset---immutable
+once its created it cannt be modified
+fr=frozenset(["a","b","c"])
+
+
+###################################
+tuple--is immutable once you created u cannt add or modify or remove the elemets
+tuple is ordered collection of list
+tuple --allow the duplicates
